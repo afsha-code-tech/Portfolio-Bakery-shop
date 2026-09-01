@@ -1,113 +1,88 @@
-// ===============================
-// MOBILE MENU
-// ===============================
+/* ================= MOBILE MENU ================= */
 
-const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
 
-menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("mobile-open");
+menuBtn.addEventListener("click", () => {
+  mobileMenu.classList.toggle("open");
+});
 
-    if (navLinks.classList.contains("mobile-open")) {
-        menuToggle.textContent = "✕";
-    } else {
-        menuToggle.textContent = "☰";
+
+/* Close mobile menu after clicking a link */
+
+document.querySelectorAll(".mobile-menu a").forEach(link => {
+  link.addEventListener("click", () => {
+    mobileMenu.classList.remove("open");
+  });
+});
+
+
+/* ================= PRODUCT DRAG / SWIPE ================= */
+
+/*
+   Mobile:
+   → normal finger swipe
+
+   Laptop/Desktop:
+   → mouse drag works too
+
+   IMPORTANT:
+   → NO automatic scrolling
+*/
+
+const slider = document.getElementById("productSlider");
+
+let isDown = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener("mousedown", (e) => {
+  isDown = true;
+  slider.classList.add("dragging");
+
+  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+});
+
+slider.addEventListener("mouseleave", () => {
+  isDown = false;
+});
+
+slider.addEventListener("mouseup", () => {
+  isDown = false;
+});
+
+slider.addEventListener("mousemove", (e) => {
+  if (!isDown) return;
+
+  e.preventDefault();
+
+  const x = e.pageX - slider.offsetLeft;
+  const walk = (x - startX) * 1.4;
+
+  slider.scrollLeft = scrollLeft - walk;
+});
+
+
+/* ================= IMAGE ERROR PROTECTION ================= */
+
+/*
+   If an image ever fails to load, hide the broken-image
+   instead of showing the ugly broken-image icon.
+*/
+
+document.querySelectorAll("img").forEach(img => {
+
+  img.addEventListener("error", () => {
+
+    img.style.display = "none";
+
+    const parent = img.parentElement;
+
+    if (parent) {
+      parent.classList.add("image-error");
     }
-});
 
-
-// Close mobile menu after clicking a link
-
-document.querySelectorAll(".nav-links a").forEach(link => {
-    link.addEventListener("click", () => {
-        navLinks.classList.remove("mobile-open");
-        menuToggle.textContent = "☰";
-    });
-});
-
-
-// ===============================
-// SCROLL REVEAL ANIMATION
-// ===============================
-
-const revealElements = document.querySelectorAll(".reveal");
-
-const revealObserver = new IntersectionObserver(
-    (entries, observer) => {
-
-        entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
-                entry.target.classList.add("active");
-                observer.unobserve(entry.target);
-            }
-
-        });
-
-    },
-    {
-        threshold: 0.15
-    }
-);
-
-
-revealElements.forEach(element => {
-    revealObserver.observe(element);
-});
-
-
-// ===============================
-// IMAGE MARQUEE PAUSE ON TOUCH
-// ===============================
-
-const marquees = document.querySelectorAll(
-    ".marquee, .reverse-marquee"
-);
-
-marquees.forEach(marquee => {
-
-    marquee.addEventListener("touchstart", () => {
-        const track = marquee.querySelector(
-            ".marquee-track, .reverse-track"
-        );
-
-        track.style.animationPlayState = "paused";
-    });
-
-    marquee.addEventListener("touchend", () => {
-        const track = marquee.querySelector(
-            ".marquee-track, .reverse-track"
-        );
-
-        track.style.animationPlayState = "running";
-    });
-
-});
-
-
-// ===============================
-// SMOOTH ANCHOR CLICK
-// ===============================
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-
-    anchor.addEventListener("click", function (event) {
-
-        const targetId = this.getAttribute("href");
-
-        if (targetId === "#") return;
-
-        const target = document.querySelector(targetId);
-
-        if (target) {
-            event.preventDefault();
-
-            target.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-        }
-
-    });
+  });
 
 });

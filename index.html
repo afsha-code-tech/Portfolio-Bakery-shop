@@ -1,464 +1,389 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Crumb & Bloom Bakery</title>
+  <title>Crumb & Bloom — Artisan Bakery</title>
+  <meta
+    name="description"
+    content="Crumb & Bloom — freshly baked breads, pastries, cakes and sweet treats."
+  >
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-    <header class="navbar">
-        <a href="#home" class="logo">
-            Crumb<span>&</span>Bloom
-        </a>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a href="#home" class="logo">
+      Crumb<span>&</span>Bloom
+    </a>
 
-        <nav class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#story">Our Story</a>
-            <a href="#menu">Menu</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#contact">Contact</a>
-        </nav>
+    <nav class="desktop-nav">
+      <a href="#home">Home</a>
+      <a href="#bakes">Our Bakes</a>
+      <a href="#about">About</a>
+      <a href="#visit">Visit Us</a>
+    </nav>
 
-        <a href="#order" class="nav-button">Order Now</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
 
-        <button class="menu-toggle" aria-label="Open menu">
-            ☰
-        </button>
-    </header>
-
-
-    <!-- HERO -->
-    <main>
-
-        <section class="hero" id="home">
-
-            <div class="hero-content">
-                <p class="eyebrow">BAKED FRESH • MADE WITH LOVE</p>
-
-                <h1>
-                    Little moments
-                    <br>
-                    deserve <em>something sweet.</em>
-                </h1>
-
-                <p class="hero-text">
-                    Handcrafted breads, buttery pastries and beautiful cakes
-                    made fresh every day.
-                </p>
-
-                <div class="hero-buttons">
-                    <a href="#menu" class="primary-btn">Explore Our Menu <span>↗</span></a>
-                    <a href="#story" class="text-btn">Our Story</a>
-                </div>
-            </div>
-
-            <div class="hero-image">
-                <img
-                    src="ulysse-pointcheval-1WmlAiYgnoU-unsplash.jpg"
-                    alt="Beautiful pink celebration cake"
-                >
-
-                <div class="floating-card">
-                    <span>✦</span>
-                    <div>
-                        <strong>Freshly baked</strong>
-                        <small>Every single morning</small>
-                    </div>
-                </div>
-            </div>
-
-        </section>
+  <!-- MOBILE MENU -->
+  <nav class="mobile-menu" id="mobileMenu">
+    <a href="#home">Home</a>
+    <a href="#bakes">Our Bakes</a>
+    <a href="#about">About</a>
+    <a href="#visit">Visit Us</a>
+  </nav>
 
 
-        <!-- MOVING IMAGE STRIP -->
-        <section class="moving-gallery">
+  <!-- HERO -->
+  <main>
 
-            <div class="marquee">
-                <div class="marquee-track">
+    <section class="hero" id="home">
 
-                    <div class="marquee-item">
-                        <img src="andy-chilton-0JFveX0c778-unsplash.jpg" alt="Cupcakes">
-                        <span>Sweet moments</span>
-                    </div>
+      <div class="hero-content">
+        <p class="eyebrow">BAKED FRESH, SERVED WITH LOVE</p>
 
-                    <div class="marquee-item">
-                        <img src="farhad-ibrahimzade-I0Vb0DejVZ0-unsplash.jpg" alt="Freshly baked bread">
-                        <span>Freshly baked</span>
-                    </div>
+        <h1>
+          Little moments<br>
+          taste better <em>fresh.</em>
+        </h1>
 
-                    <div class="marquee-item">
-                        <img src="mae-mu-m9pzwmxm2rk-unsplash.jpg" alt="Baking ingredients">
-                        <span>Made from scratch</span>
-                    </div>
+        <p class="hero-text">
+          Handcrafted breads, buttery pastries and celebration cakes
+          made fresh every day.
+        </p>
 
-                    <div class="marquee-item">
-                        <img src="mohamed-hassouna-N4gtuEZ5gWc-unsplash.jpg" alt="Fresh bread">
-                        <span>Golden goodness</span>
-                    </div>
+        <div class="hero-buttons">
+          <a href="#bakes" class="primary-btn">Explore our bakes</a>
+          <a href="#visit" class="text-btn">Visit the bakery →</a>
+        </div>
+      </div>
 
-                    <div class="marquee-item">
-                        <img src="robert-anderson-W-tSAyRMy6w-unsplash.jpg" alt="Croissants">
-                        <span>Buttery pastries</span>
-                    </div>
+      <div class="hero-image">
+        <img
+          src="mohamed-hassouna-N4gtuEZ5gWc-unsplash.jpg"
+          alt="Beautiful freshly baked cake"
+          width="1024"
+          height="1536"
+        >
+      </div>
 
-                    <!-- DUPLICATE FOR INFINITE LOOP -->
-
-                    <div class="marquee-item">
-                        <img src="andy-chilton-0JFveX0c778-unsplash.jpg" alt="Cupcakes">
-                        <span>Sweet moments</span>
-                    </div>
-
-                    <div class="marquee-item">
-                        <img src="farhad-ibrahimzade-I0Vb0DejVZ0-unsplash.jpg" alt="Freshly baked bread">
-                        <span>Freshly baked</span>
-                    </div>
-
-                    <div class="marquee-item">
-                        <img src="mae-mu-m9pzwmxm2rk-unsplash.jpg" alt="Baking ingredients">
-                        <span>Made from scratch</span>
-                    </div>
-
-                    <div class="marquee-item">
-                        <img src="mohamed-hassouna-N4gtuEZ5gWc-unsplash.jpg" alt="Fresh bread">
-                        <span>Golden goodness</span>
-                    </div>
-
-                    <div class="marquee-item">
-                        <img src="robert-anderson-W-tSAyRMy6w-unsplash.jpg" alt="Croissants">
-                        <span>Buttery pastries</span>
-                    </div>
-
-                </div>
-            </div>
-
-        </section>
+    </section>
 
 
-        <!-- STORY -->
-        <section class="story section" id="story">
-
-            <div class="story-image reveal">
-                <img
-                    src="mae-mu-m9pzwmxm2rk-unsplash.jpg"
-                    alt="Fresh ingredients and baking tools"
-                >
-            </div>
-
-            <div class="story-content reveal">
-
-                <p class="eyebrow">OUR LITTLE BAKERY</p>
-
-                <h2>
-                    From simple ingredients
-                    <em>to something special.</em>
-                </h2>
-
-                <p>
-                    We believe the best things are made slowly. Our bakers
-                    work with carefully chosen ingredients, traditional
-                    techniques and a whole lot of love.
-                </p>
-
-                <p>
-                    Every loaf, pastry and cake that leaves our kitchen is
-                    made to bring a little happiness to your day.
-                </p>
-
-                <a href="#menu" class="underlined-link">
-                    Discover our menu →
-                </a>
-
-            </div>
-
-        </section>
+    <!-- MARQUEE STRIP -->
+    <section class="bake-strip" aria-label="Bakery highlights">
+      <div>
+        FRESH DAILY
+        <span>✦</span>
+        HANDCRAFTED
+        <span>✦</span>
+        BAKED WITH LOVE
+        <span>✦</span>
+        FRESH DAILY
+        <span>✦</span>
+      </div>
+    </section>
 
 
-        <!-- MENU -->
-        <section class="menu-section section" id="menu">
+    <!-- PRODUCTS -->
+    <section class="products-section" id="bakes">
 
-            <div class="section-heading reveal">
-                <div>
-                    <p class="eyebrow">WHAT'S FRESH</p>
-                    <h2>Made today.<br><em>Enjoyed today.</em></h2>
-                </div>
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">FROM OUR OVEN</p>
+          <h2>Something delicious<br><em>for everyone.</em></h2>
+        </div>
 
-                <p class="heading-description">
-                    From flaky croissants to celebration cakes,
-                    there's always something waiting for you.
-                </p>
-            </div>
-
-
-            <div class="product-grid">
-
-                <article class="product-card reveal">
-                    <div class="product-image">
-                        <img src="robert-anderson-W-tSAyRMy6w-unsplash.jpg" alt="Croissant">
-                        <span class="tag">Popular</span>
-                    </div>
-                    <div class="product-info">
-                        <div>
-                            <h3>Butter Croissant</h3>
-                            <p>Golden, flaky & buttery</p>
-                        </div>
-                        <strong>₹120</strong>
-                    </div>
-                </article>
+        <p class="section-description">
+          From golden croissants to dreamy cakes,
+          every bake gets the attention it deserves.
+        </p>
+      </div>
 
 
-                <article class="product-card reveal">
-                    <div class="product-image">
-                        <img src="mohamed-hassouna-N4gtuEZ5gWc-unsplash.jpg" alt="Fresh bread">
-                    </div>
-                    <div class="product-info">
-                        <div>
-                            <h3>Artisan Bread</h3>
-                            <p>Slow baked & rustic</p>
-                        </div>
-                        <strong>₹180</strong>
-                    </div>
-                </article>
+      <!-- TOUCH / SWIPE PRODUCT BOX -->
+      <div class="product-slider" id="productSlider">
 
-
-                <article class="product-card reveal">
-                    <div class="product-image">
-                        <img src="andy-chilton-0JFveX0c778-unsplash.jpg" alt="Pink cupcakes">
-                        <span class="tag">New</span>
-                    </div>
-                    <div class="product-info">
-                        <div>
-                            <h3>Birthday Cupcakes</h3>
-                            <p>Colourful & celebratory</p>
-                        </div>
-                        <strong>₹240</strong>
-                    </div>
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- FULL WIDTH IMAGE -->
-        <section class="feature-image reveal">
-
+        <article class="product-card">
+          <div class="product-image">
             <img
-                src="sandi-benedicta-2KEo2FL1n9o-unsplash.jpg"
-                alt="Beautiful bakery display"
+              src="andy-chilton-0JFveX0c778-unsplash.jpg"
+              alt="Pink frosted cupcakes"
+              width="1024"
+              height="1536"
             >
-
-            <div class="feature-overlay">
-                <p>BAKED WITH PASSION</p>
-                <h2>Good bread.<br>Good mood.</h2>
+          </div>
+          <div class="product-info">
+            <div>
+              <h3>Celebration Cupcakes</h3>
+              <p>Vanilla · Buttercream · Sprinkles</p>
             </div>
+            <strong>₹180</strong>
+          </div>
+        </article>
 
-        </section>
 
-
-        <!-- INFINITE SECOND SLIDER -->
-        <section class="infinite-section">
-
-            <div class="infinite-title">
-                <p class="eyebrow">A LITTLE SOMETHING</p>
-                <h2>Made for your <em>sweetest days.</em></h2>
+        <article class="product-card">
+          <div class="product-image">
+            <img
+              src="farhad-ibrahimzade-I0Vb0DejVZ0-unsplash.jpg"
+              alt="Freshly baked bread rolls"
+              width="1536"
+              height="1024"
+            >
+          </div>
+          <div class="product-info">
+            <div>
+              <h3>Fresh Bread Rolls</h3>
+              <p>Soft · Warm · Freshly baked</p>
             </div>
+            <strong>₹140</strong>
+          </div>
+        </article>
 
-            <div class="reverse-marquee">
 
-                <div class="reverse-track">
-
-                    <div class="large-photo">
-                        <img src="ulysse-pointcheval-1WmlAiYgnoU-unsplash.jpg" alt="Pink cake">
-                    </div>
-
-                    <div class="large-photo">
-                        <img src="sandi-benedicta-2KEo2FL1n9o-unsplash.jpg" alt="Bakery cakes">
-                    </div>
-
-                    <div class="large-photo">
-                        <img src="andy-chilton-0JFveX0c778-unsplash.jpg" alt="Birthday cupcakes">
-                    </div>
-
-                    <div class="large-photo">
-                        <img src="farhad-ibrahimzade-I0Vb0DejVZ0-unsplash.jpg" alt="Baking">
-                    </div>
-
-                    <!-- DUPLICATE -->
-                    <div class="large-photo">
-                        <img src="ulysse-pointcheval-1WmlAiYgnoU-unsplash.jpg" alt="Pink cake">
-                    </div>
-
-                    <div class="large-photo">
-                        <img src="sandi-benedicta-2KEo2FL1n9o-unsplash.jpg" alt="Bakery cakes">
-                    </div>
-
-                    <div class="large-photo">
-                        <img src="andy-chilton-0JFveX0c778-unsplash.jpg" alt="Birthday cupcakes">
-                    </div>
-
-                    <div class="large-photo">
-                        <img src="farhad-ibrahimzade-I0Vb0DejVZ0-unsplash.jpg" alt="Baking">
-                    </div>
-
-                </div>
-
+        <article class="product-card">
+          <div class="product-image">
+            <img
+              src="katie-rosario-QNyRp21hb5I-unsplash.jpg"
+              alt="Fresh apples and baking ingredients"
+              width="1536"
+              height="1024"
+            >
+          </div>
+          <div class="product-info">
+            <div>
+              <h3>Apple Bake</h3>
+              <p>Apple · Cinnamon · Golden pastry</p>
             </div>
+            <strong>₹220</strong>
+          </div>
+        </article>
 
-        </section>
 
-
-        <!-- BAKERY DISPLAY -->
-        <section class="display-section section">
-
-            <div class="display-content reveal">
-
-                <p class="eyebrow">THE DAILY DISPLAY</p>
-
-                <h2>
-                    There's always
-                    <em>something new.</em>
-                </h2>
-
-                <p>
-                    Come by in the morning for warm bread, stay for coffee,
-                    and leave with something sweet.
-                </p>
-
-                <div class="stats">
-                    <div>
-                        <strong>7+</strong>
-                        <span>Years baking</span>
-                    </div>
-
-                    <div>
-                        <strong>30+</strong>
-                        <span>Fresh treats</span>
-                    </div>
-
-                    <div>
-                        <strong>100%</strong>
-                        <span>Made with love</span>
-                    </div>
-                </div>
-
+        <article class="product-card">
+          <div class="product-image">
+            <img
+              src="mae-mu-m9pzwmxm2rk-unsplash.jpg"
+              alt="Assorted bakery breads"
+              width="1536"
+              height="1024"
+            >
+          </div>
+          <div class="product-info">
+            <div>
+              <h3>Artisan Bread</h3>
+              <p>Rustic · Crispy · Slow baked</p>
             </div>
+            <strong>₹160</strong>
+          </div>
+        </article>
 
-            <div class="display-image reveal">
-                <img
-                    src="sandi-benedicta-2KEo2FL1n9o-unsplash.jpg"
-                    alt="Bakery counter"
-                >
+
+        <article class="product-card">
+          <div class="product-image">
+            <img
+              src="robert-anderson-W-tSAyRMy6w-unsplash.jpg"
+              alt="Golden croissants"
+              width="1536"
+              height="1024"
+            >
+          </div>
+          <div class="product-info">
+            <div>
+              <h3>Butter Croissant</h3>
+              <p>Flaky · Buttery · Golden</p>
             </div>
+            <strong>₹150</strong>
+          </div>
+        </article>
 
-        </section>
 
-
-        <!-- ORDER CTA -->
-        <section class="order-section" id="order">
-
-            <div class="order-inner">
-
-                <p class="eyebrow">YOUR NEXT SWEET MOMENT</p>
-
-                <h2>
-                    Have something
-                    <em>delicious</em> in mind?
-                </h2>
-
-                <p>
-                    Place an order for your next celebration,
-                    gathering or just-because moment.
-                </p>
-
-                <a href="#contact" class="primary-btn light">
-                    Start an Order <span>↗</span>
-                </a>
-
+        <article class="product-card">
+          <div class="product-image">
+            <img
+              src="sandi-benedicta-2KEo2FL1n9o-unsplash.jpg"
+              alt="Bakery display with cakes and pastries"
+              width="1024"
+              height="1536"
+            >
+          </div>
+          <div class="product-info">
+            <div>
+              <h3>Berry Pastries</h3>
+              <p>Fresh berries · Cream · Pastry</p>
             </div>
+            <strong>₹260</strong>
+          </div>
+        </article>
 
-        </section>
 
-
-        <!-- CONTACT -->
-        <section class="contact section" id="contact">
-
-            <div class="contact-heading reveal">
-                <p class="eyebrow">COME SAY HELLO</p>
-                <h2>Let's make your day<br><em>a little sweeter.</em></h2>
+        <article class="product-card">
+          <div class="product-image">
+            <img
+              src="ulysse-pointcheval-1WmlAiYgno-unsplash.jpg"
+              alt="Assorted fresh bakery breads"
+              width="1536"
+              height="1024"
+            >
+          </div>
+          <div class="product-info">
+            <div>
+              <h3>Daily Bread Basket</h3>
+              <p>Mixed breads · Fresh · Rustic</p>
             </div>
+            <strong>₹320</strong>
+          </div>
+        </article>
 
-            <div class="contact-grid">
+      </div>
 
-                <div class="contact-box reveal">
-                    <span>📍</span>
-                    <h3>Visit us</h3>
-                    <p>24 Baker Street<br>New Delhi, India</p>
-                </div>
+      <div class="slider-note">
+        <span>←</span>
+        <p>Swipe to explore</p>
+        <span>→</span>
+      </div>
 
-                <div class="contact-box reveal">
-                    <span>✉</span>
-                    <h3>Email us</h3>
-                    <p>hello@crumbandbloom.com</p>
-                </div>
-
-                <div class="contact-box reveal">
-                    <span>◷</span>
-                    <h3>Opening hours</h3>
-                    <p>Mon – Sun<br>8:00 AM – 9:00 PM</p>
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
+    </section>
 
 
-    <!-- FOOTER -->
-    <footer>
+    <!-- ABOUT -->
+    <section class="about-section" id="about">
 
-        <div class="footer-top">
+      <div class="about-image">
+        <img
+          src="katie-rosario-QNyRp21hb5I-unsplash.jpg"
+          alt="Ingredients prepared for baking"
+          width="1536"
+          height="1024"
+        >
+      </div>
 
-            <div class="footer-brand">
-                <a href="#home" class="logo">
-                    Crumb<span>&</span>Bloom
-                </a>
+      <div class="about-content">
+        <p class="eyebrow">OUR LITTLE BAKERY</p>
 
-                <p>
-                    Freshly baked happiness,<br>
-                    one bite at a time.
-                </p>
-            </div>
+        <h2>
+          Made slowly.<br>
+          Made <em>properly.</em>
+        </h2>
 
-            <div class="footer-links">
-                <a href="#home">Home</a>
-                <a href="#story">Our Story</a>
-                <a href="#menu">Menu</a>
-                <a href="#gallery">Gallery</a>
-                <a href="#contact">Contact</a>
-            </div>
+        <p>
+          At Crumb & Bloom, we believe good baking should never
+          be rushed. We work with simple ingredients, traditional
+          techniques and a whole lot of care.
+        </p>
 
+        <p>
+          Every morning starts with warm ovens, fresh dough and
+          the smell of something wonderful baking.
+        </p>
+
+        <a href="#visit" class="primary-btn">Come say hello</a>
+      </div>
+
+    </section>
+
+
+    <!-- IMAGE FEATURE -->
+    <section class="feature-section">
+
+      <div class="feature-text">
+        <p class="eyebrow">THE BAKERY EXPERIENCE</p>
+
+        <h2>
+          Your favourite<br>
+          corner for <em>something sweet.</em>
+        </h2>
+
+        <p>
+          Pick a pastry, grab a warm drink and stay for a while.
+          There is always something fresh coming out of our oven.
+        </p>
+      </div>
+
+      <div class="feature-image">
+        <img
+          src="sandi-benedicta-2KEo2FL1n9o-unsplash.jpg"
+          alt="Fresh cakes and pastries in a bakery"
+          width="1024"
+          height="1536"
+        >
+      </div>
+
+    </section>
+
+
+    <!-- VISIT -->
+    <section class="visit-section" id="visit">
+
+      <div class="visit-title">
+        <p class="eyebrow">COME FIND US</p>
+        <h2>Visit our<br><em>bakery.</em></h2>
+      </div>
+
+      <div class="visit-details">
+
+        <div class="detail">
+          <span class="detail-icon">⌖</span>
+          <div>
+            <h3>Visit us</h3>
+            <p>
+              24 Baker Street<br>
+              New Delhi, India
+            </p>
+          </div>
         </div>
 
-        <div class="footer-bottom">
-            <p>© 2026 Crumb & Bloom Bakery</p>
-            <p>Made with flour & love ✦</p>
+        <div class="detail">
+          <span class="detail-icon">✉</span>
+          <div>
+            <h3>Email us</h3>
+            <a href="mailto:hello@crumbandbloom.com">
+              hello@crumbandbloom.com
+            </a>
+          </div>
         </div>
 
-    </footer>
+        <div class="detail">
+          <span class="detail-icon">◷</span>
+          <div>
+            <h3>Opening hours</h3>
+            <p>
+              Mon – Sun<br>
+              8:00 AM – 9:00 PM
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
 
 
-    <script src="script.js"></script>
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">
+      Crumb<span>&</span>Bloom
+    </div>
 
+    <p>Freshly baked. Always worth it.</p>
+
+    <a href="#home" class="back-top">Back to top ↑</a>
+  </footer>
+
+
+  <script src="script.js"></script>
 </body>
-          </html>
+              </html>
